@@ -1,5 +1,6 @@
 import { DescuentoFijo, DescuentoPorcentual, DescuentoPorCantidad } from './domain/Descuento.js';
 import { Producto } from './domain/Producto.js'
+import { Catalogo, Categoria } from './domain/Catalogo.js'
 import { getRandomNaturalNumber } from './functions.js';
 
 import chalk from "chalk";
@@ -21,13 +22,16 @@ await figlet("MegaSuper", (err, data) => {
 })
 
 
-var producto = new Producto(100, "CocaCola", 10)
-console.log(producto)
 
-producto.agregarDescuento(new DescuentoFijo(10))
-producto.agregarDescuento(new DescuentoPorcentual(35))
-producto.agregarDescuento(new DescuentoPorCantidad(2, 50))
+// producto.agregarDescuento(new DescuentoFijo(10))
+// producto.agregarDescuento(new DescuentoPorcentual(35))
+// producto.agregarDescuento(new DescuentoPorCantidad(2, 50))
 
-console.log(producto)
+console.log("CATALOGO DE PRODUCTOS DISPONIBLES")
+for (const producto in Catalogo) {
+	console.log("")
+	console.log(Catalogo[producto])
+}
 
-console.log(producto.precioFinal)
+
+

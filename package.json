@@ -2,15 +2,24 @@
   "name": "megasuper",
   "version": "1.0.0",
   "description": "ejercicio de clase megasuper",
-  "main": "index.js",
+  "homepage": "https://github.com/zhl27/DDSI-ejercicio-megasuper#readme",
+  "bugs": {
+    "url": "https://github.com/zhl27/DDSI-ejercicio-megasuper/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhl27/DDSI-ejercicio-megasuper.git"
+  },
+  "license": "ISC",
+  "author": "",
   "type": "module",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "chalk": "^5.4.1",
     "figlet": "^1.8.0"
-  }
+  },
+  "devDependencies": {}
 }

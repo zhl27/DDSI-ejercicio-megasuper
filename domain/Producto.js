@@ -1,35 +1,39 @@
-export class Producto {
+// cada instancia Producto representaría un control de stock de cierto tipo de producto.
 
-	#precioBase;  // this defines precioBase as a private variable
-	#precioFinal;
+export class Producto { 
 
-	constructor(precioBase, nombre, cantidad) {
-		this.#precioBase = precioBase 
+	#precio
+	#nombre
+	#categoria
+
+	constructor(precio, nombre, categoria, cantidad) {
+		this.precio = precio 
 		this.nombre = nombre
+		this.categoria = categoria
 		this.cantidad = cantidad
-		this.descuentos = []
 	}
 
-	agregarDescuento(nuevoDescuento) {
-		this.descuentos.push(nuevoDescuento)
-	}
 	
-	// private variables need getters and setters
 
-	get precioBase() {
-		return this.#precioBase
-	}
+	// set precio(nuevoPrecio) {
+		// this.#precio = nuevoPrecio
+		// console.log("Modificado precio a: "+nuevoPrecio)
+	// }
+// 
+	// set nombre(nuevoNombre) {
+		// this.#nombre = nuevoNombre
+		// console.log("Modificado nombre a: "+nuevoNombre)
+	// }
+	// 
+	// get nombre() {
+		// return this.#nombre
+	// }
+// 
+	// get precio() {
+		// return this.#precio
+	// }
 
-	set precioBase(nuevoPrecio) {
-		this.#precioBase = nuevoPrecio + 10
-	}
-
-	get precioFinal() {
-		const precioBaseTotal = this.#precioBase * this.cantidad;
-		return this.descuentos.reduce( // method reduce() is equivalent to a Haskell foldl function, it accumulates the effect on an initial value (the seed)
-			(precioAnterior, descuento) => {
-				precioAnterior - descuento.valorDescontado(precioBaseTotal, this.cantidad)
-			}, precioBaseTotal
-		);
-	}
+	// get categoria() {
+		// return this.#categoria
+	// }
 }
