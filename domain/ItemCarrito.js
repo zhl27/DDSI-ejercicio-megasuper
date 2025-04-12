@@ -7,7 +7,7 @@ export class ItemCarrito {
 	#precioBase
 	#precioFinal
 
-	constructor(producto, cantidad) { 
+	constructor(producto, cantidad) {
 		this.#nombre = producto.nombre
 		this.#precioBase = producto.precio
 		producto.cantidad -= cantidad // se debe descontar del stock

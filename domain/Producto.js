@@ -5,15 +5,22 @@ export class Producto {
 	#precio
 	#nombre
 	#categoria
+	
 
-	constructor(precio, nombre, categoria, cantidad) {
-		this.precio = precio 
+	constructor(precioBase, nombre, categoria, cantidad) {
+		this.precioBase = precioBase
 		this.nombre = nombre
 		this.categoria = categoria
 		this.cantidad = cantidad
 	}
 
+	aumentarPrecioBase(precio) {
+		this.precioBase += precio
+	}
 	
+	get precioFinal() {
+		return this.precioBase
+	}
 
 	// set precio(nuevoPrecio) {
 		// this.#precio = nuevoPrecio
