@@ -15,7 +15,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "vitest"
+    "test": "vitest",
+    ""
   },
   "dependencies": {
     "chalk": "^5.4.1",
