@@ -16,7 +16,7 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest",
-    ""
+    "dev": "node --watch ./server.js"
   },
   "dependencies": {
     "chalk": "^5.4.1",
